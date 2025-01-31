@@ -12,7 +12,7 @@ st.title("☀️ Solar Power Prediction with Time Series Plot ☀️")
 # Automatically set the default start date to 1 year ago
 today = datetime.today()
 default_start = (today - timedelta(days=365)).strftime('%Y%m%d')
-default_end = today.strftime('%Y%m%d')  # Today
+default_end = today.strftime('%Y/%m/%d')  # Today
 
 # User Inputs
 lat = st.number_input("Enter Latitude:", value=28.6139)
