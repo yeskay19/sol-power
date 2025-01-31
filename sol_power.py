@@ -17,8 +17,8 @@ default_end = today.strftime('%Y%m%d')  # Today
 # User Inputs
 lat = st.number_input("Enter Latitude:", value=28.6139)
 lon = st.number_input("Enter Longitude:", value=77.2090)
-start_date = st.text_input("Start Date (YYYYMMDD):", default_start)
-end_date = st.text_input("End Date (YYYYMMDD):", default_end)
+start_date = st.text_input("Start Date (YYYY/MM/DD):", default_start)
+end_date = st.text_input("End Date (YYYY/MM/DD):", default_end)
 panel_area = st.number_input("Solar Panel Area (m²):", value=10)
 efficiency = st.slider("Panel Efficiency (%):", 10, 25, 18)
 
