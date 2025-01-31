@@ -4,14 +4,10 @@
 import streamlit as st
 import requests
 import pandas as pd
-import matplotlib
 
-# ✅ Set Matplotlib to use "Agg" (Non-GUI backend)
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
-st.title("☀️ Solar Power Prediction with Time Series Plot")
+st.title("☀️ Solar Power Prediction with Time Series Plot ☀️")
 
 # Automatically set the default start date to 1 year ago
 today = datetime.today()
@@ -53,18 +49,7 @@ if st.button("Estimate Power"):
 
             st.success(f"🌞 Estimated Power Output: {energy_output:.2f} kWh/day")
 
-            # 📌 Time Series Plot of Solar Radiation
-            st.subheader("📈 Time Series Plot of Daily Solar Radiation (Filtered)")
-            fig, ax = plt.subplots(figsize=(12, 5))
-            ax.plot(df['Date'].to_numpy(), df['Solar Radiation'].to_numpy(), marker='o', linestyle='-', color='b', label='Solar Radiation (W/m²)')
-            ax.set_xlabel("Date")
-            ax.set_ylabel("Solar Radiation (W/m²)")
-            ax.set_title("Daily Solar Radiation Over Time")
-            ax.legend()
-            ax.grid(True)
-            plt.xticks(rotation=45)
-
-            st.pyplot(fig)  # Show the plot in Streamlit
+        
 
     else:
         st.error("❌ Failed to fetch solar data. Please check inputs.")
