@@ -7,7 +7,7 @@ import pandas as pd
 
 from datetime import datetime, timedelta
 
-st.title("☀️ Solar Power Prediction with Time Series Plot ☀️")
+st.title("☀️ Solar Power Prediction with Time, and Location ☀️")
 
 # Automatically set the default start date to 1 year ago
 today = datetime.today()
